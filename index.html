@@ -38,7 +38,7 @@
 
 
                     <div class="m-t-lg">
-                        <a href="#price" class="scroll btn b-2x btn-lg b-black btn-default btn-rounded text-lg font-bold m-b-xxl">
+                        <a href="#feedback" class="scroll btn b-2x btn-lg b-black btn-default btn-rounded text-lg font-bold m-b-xxl">
                             Давай попробуем!
                         </a>
                         <a href="#" class="btn btn-lg text-md m-b-xxl font-thin hidden-xs">
@@ -576,7 +576,7 @@
                             </li>
                         </ul>
                         <div class="panel-footer text-center">
-                            <a href="#price" class="scroll btn btn-dark btn-rounded m">Хочу попробывать</a>
+                            <button type="button" class="btn btn-dark btn-rounded m"  data-toggle="modal" data-target="#modalRequest">Заказать cейчас</button>
                         </div>
                     </div>
                 </div>
@@ -618,7 +618,7 @@
                         </ul>
                         <div class="panel-footer text-center b-t m-t bg-light lter">
                             <div class="m-t-sm">Рекомендовано для вас</div>
-                            <a href="#price" class="scroll btn btn-info btn-rounded  m">Хочу попробывать</a>
+                            <button type="button" class="btn btn-info btn-rounded m"  data-toggle="modal" data-target="#modalRequest">Заказать cейчас</button>
                         </div>
                     </div>
                 </div>
@@ -655,7 +655,7 @@
                             </li>
                         </ul>
                         <div class="panel-footer text-center">
-                            <a href="#" class="btn btn-dark btn-rounded  m">Хочу попробывать</a>
+                            <button type="button" class="btn btn-dark btn-rounded m"  data-toggle="modal" data-target="#modalRequest">Заказать cейчас</button>
                         </div>
                     </div>
                 </div>
@@ -693,7 +693,7 @@
                             </li>
                         </ul>
                         <div class="panel-footer text-center">
-                            <a href="#" class="btn btn-dark btn-rounded m">Хочу попробывать</a>
+                            <button type="button" class="btn btn-dark btn-rounded m"  data-toggle="modal" data-target="#modalRequest">Заказать cейчас</button>
                         </div>
                     </div>
                 </div>
@@ -708,7 +708,7 @@
 
 
 
-    <section class="bg-white b-b box-shadow-lg">
+    <section class="bg-white b-b box-shadow-lg" id="feedback">
         <div class="container">
             <div class="row m-b-lg">
                 <div class="col-md-6">
@@ -738,14 +738,14 @@
                             <div class="row m-t-xs">
                                 <div class="col-sm-6">
                                     <div class="form-group form-group-default required">
-                                        <label for="phone" class="small">Телефон</label>
+                                        <label class="small">Телефон</label>
                                         <input type="text" class="form-control" name="phone" required="" placeholder="Номер телефона">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group  form-group-default">
-                                        <label for="email" class="small">Электронная почта</label>
+                                        <label class="small">Электронная почта</label>
                                         <input type="email" class="form-control" name="email" required="" placeholder="Можете указать позднее">
                                     </div>
                                 </div>
@@ -895,5 +895,77 @@
     <!-- / footer -->
 
     <script src="/dist/js/orchid.js"></script>
+</div>
+
+
+
+<div class="modal fade fill-in" id="modalRequest" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        <i class="pg-close"></i>
+    </button>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body bg-white-only b box-shadow">
+
+
+                <form role="form" class="m-t-md">
+                    <div class="m-t-lg">
+                        <h5 class="font-bold padder-v">Какой то крутой заголовок</h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group  form-group-default required">
+                                <label class="small">Имя</label>
+                                <input type="text" class="form-control" placeholder="Шелдон">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group  form-group-default">
+                                <label class="small">Фамилия</label>
+                                <input type="text" class="form-control" placeholder="Купер">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-xs">
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default required">
+                                <label class="small">Телефон</label>
+                                <input type="text" class="form-control" name="phone" required placeholder="Номер телефона">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group  form-group-default">
+                                <label class="small">Электронная почта</label>
+                                <input type="email" class="form-control" name="email" required placeholder="Можете указать позднее">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-default m-t-xs">
+                        <label class="small">Веб-сайт</label>
+                        <textarea placeholder="https://google.com/" rows="5" class="form-control no-resize"></textarea>
+                    </div>
+
+                    <div class="m-t-md clearfix">
+                        <p class="pull-left small m-t-xs">Мы обещаем, что информация не попадёт к третим лицам</p>
+                        <button class="btn btn-info btn-rounded pull-right">
+                            Написать нам <i class="fa fa-paper-plane-o m-l-xs" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 </html>
